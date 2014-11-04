@@ -1,0 +1,104 @@
+/* CSS for GUI...*/
+.clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}.clearfix:after{clear:both;}
+
+/*
+=== html, body, & p ===
+===================
+*/
+
+html {
+	background-color: #666666;
+	margin: 0 auto;
+}
+
+body {
+	margin: 0 auto;
+	width: 510px;
+}
+
+p {
+	background-color: #696969;
+	box-shadow: 10px 10px 10px 0 rgba(0,0,0,20);
+	font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif";
+	font-size: 40px;
+	margin: 15px auto;
+	text-align: center;
+}
+
+/*
+=== Memory Board header/reset button ===
+========================================
+*/
+
+#memorygame {
+	display:block;
+	margin: 0 auto;
+	text-align:center;
+}
+
+/*
+=== Reset Button ===
+====================
+*/
+
+#resetbutton {
+	background-color: #6F6F6F;
+	border: none;
+	box-shadow: 5px 5px 5px 0 rgba(0,0,0,20);
+	clear:both;
+	display:block;
+	margin: 0 auto;
+}
+
+/*
+=== Game Board & Card States ===
+================================
+*/
+
+#memorygrid {
+	display:block;
+	margin: 0 auto;
+}
+
+#memorygrid div.facedown {
+	background:url(images/twowheelgrayback.jpg);
+	background-repeat:no-repeat;
+	background-size:contain;
+	border-radius:5px;
+	box-shadow: 10px 10px 10px 0 rgba(0,0,0,20);
+	float:left;
+	margin: 12px;
+	height:106px;
+	width:77px;
+	transition: background-color 1s ease,
+				text 1s ease,
+				text-shadow 1s ease;
+}
+
+#memorygrid div.facedown span {
+	display:block;
+	margin-top: 48%;
+	text-align:center;
+	width:100%;
+}
+
+#memorygrid div.faceup {
+	background: #CFCFCF;
+	font-size: 28pt;
+	text-align:center;
+	text-shadow: 2px 2px #8A8A8A;
+}
+
+#memorygrid div.matched {
+	background-color:transparent;
+	box-shadow: none;
+}
+
+#memorygrid div.matched span {
+	visibility:hidden;
+}
+
+
+
+
+
