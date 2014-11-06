@@ -1,0 +1,187 @@
+/*#memorygame {
+	display:inline-block;
+}
+
+#memorygame .memoryCell {
+	width:50px;
+	height:50px;
+	border-radius:5px;
+	border:1px solid black;
+	background-color:#ddddff;
+	float:left;
+	text-align:center;
+	line-height:50px;
+	font-size:large;
+	margin:5px;
+}
+
+#memorygame .firstCol {
+	clear:both;
+}
+
+#memorygame .faceup {
+	background-color:#ffffff;
+}
+
+#memorygame .faceup:before {
+	content:attr(value);
+}
+
+#memorygame .missing {
+	border-color:grey;
+	color:grey;
+	visibility:hidden;
+}
+
+.resetBtn {
+	clear:both;
+	display:block;
+	margin:0 auto;
+}
+*/
+
+
+/* CSS for GUI...*/
+.clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}.clearfix:after{clear:both;}
+body{
+		background: url(img/stardust.png) repeat 0 0;
+		background-attachment: fixed;;
+
+}
+#memorygame {
+
+	background: rgba(0,0,0,0.1);
+	margin: 0 auto;
+	border: 1px solid #333;
+	box-shadow: inset 0 0 10px #393939;
+	
+	width:450px;
+	padding: 50px;
+}
+
+.winner{
+	position: absolute;
+	width: 100%;
+	display: block;
+	text-align: center;
+	top: 0;
+	bottom: 0;
+	background:rgba(0, 0, 0, 0.58);
+	color: #fff;
+	font-size: 50px;
+	z-index: 100;
+	padding: 60px 0 0;
+	font-family: helvetica;
+	text-transform: uppercase;
+}
+
+#memorygrid{
+	width: 100%; 
+	background: transparent;
+}
+.cardwrap { 
+		height: 110px;
+		width: 70px;
+		float: left;
+		margin: 10px;
+		cursor: pointer;
+  position: relative;
+  perspective: 800px;
+}
+.card{
+	width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+
+}
+
+
+.card .face {
+  display: block;
+  position: absolute;
+  backface-visibility: hidden;
+	height: 100px;
+  width: 60px;
+	backface-visibility: hidden;
+	border: 4px solid #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 1px #999;
+}
+.card .front {
+	background: url(img/swirl_pattern.png) repeat 0 0;
+}
+.card .back {
+  background: #fff;
+  transform: rotateY( 180deg );
+}
+
+.card.match .back{
+	background: #D7F1F3;
+}
+
+.card .back span{
+	position: absolute;
+	margin-top: 40%;
+	text-align: center;
+	display: block;
+	font-size: 40px;
+	line-height: 40px;
+	width: 100%;
+}
+
+.card.show {
+  transform: rotateY( 180deg );
+}
+
+.card.match {
+  transform: rotateY( 180deg );
+}
+
+#reset{
+	width: 100px;
+	text-align: center;
+	line-height: 20px;
+	font-size: 14px;
+	padding: 3px;
+	margin: 20px auto;
+	display: block;
+	background: #C053E8;
+	border: 3px solid #BF6DC3;
+	box-shadow: 0 0 3px #333;
+	text-transform: uppercase;
+	color: #FFD1EE;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.5s ease;
+	z-index: 110;
+	position: relative;
+}
+#reset:hover{
+	background:#793392;
+	border-color: #934497;
+}
+
+
+
+
+/*
+
+#memorygame{
+	background: #f4f4f4;
+}
+
+#memorygrid{
+	background: #999;
+}
+
+.cardwrap{
+	background: red;
+	height: 50px;
+	width: 50px;
+	float: left;
+	margin: 10px;
+}
+*/
+
