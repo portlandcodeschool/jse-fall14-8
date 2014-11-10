@@ -27,7 +27,7 @@ var MemoryGUI = (function() { // begin IIFE
         },
 
         reset: function() {
-                $('.facedown').removeClass('faceup matched');
+                $('.facedown').removeClass('faceup matched gameover');
                 $('.facedown span').remove();
         }
     });
