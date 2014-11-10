@@ -38,25 +38,22 @@ function MemoryGame(Model,len) { //<-- CHANGED
             if(matchCards(modelWhere, modelFaceup)) { // run the cardset match function
                 modelWhere.set('status', 'matched');
                 modelFaceup.set('status', 'matched');
-                if(this.gui) {
-                    this.gui.removeSoon([where, faceupCard]);
-                }
+
+                $(document).trigger("removeCard", {"where": where, "faceupCard": faceupCard});
             } else { // if cards don't match
                 modelFaceup.set('status', 'facedown');
-                if(this.gui) {
-                    this.gui.hideSoon([where, faceupCard]);
-                }
+
+                $(document).trigger("hideCard", {"where": where, "faceupCard": faceupCard})
             }
             faceupCard = false;
         }
         // game over.. if all models have the status of 'matched', then call the gui.gameReveal
         if(collection.where({status:'matched'}).length === this.length) {
-            this.gui.gameReveal();
+            $(document).trigger("gameOver");
         }
         var faceVal = displayCard(modelWhere);
-        if (this.gui) {
-            this.gui.show(where,faceVal);
-        }
+        $(document).trigger("showCard", {"where": where, "faceVal": faceVal});
+
         return faceVal;  
     };
     
