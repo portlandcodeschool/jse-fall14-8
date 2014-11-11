@@ -9,6 +9,7 @@ var length;// total slots (includes possible empties at end)
 var there; //position of face-up card, if any
 var gui = (GuiCtor)? new GuiCtor(values.length,lift,reset): null;
 function reset() {
+console.log('The game has been reset. Ready to play!');
 slots = values.slice();
 length = values.length;
 there = false;
@@ -38,7 +39,8 @@ if (gameoverFn && (remaining().length === 0))
 gameoverFn();
 }
 function lift(here) {
-//console.log('game-mod lifting '+here);
+// console.log('game-mod lifting '+here);
+
 if (!isValid(here,length)) return false;
 if (!remainsAt(here)) return false;
 if (there===here) return false;
@@ -100,7 +102,7 @@ return MemoryGame;
 
 var cards = null, gui = null, game = null; //global for debugging
 $(function() {
-    cards = new MemoryCards();
+    cards = new MemoryCards(8);
     game = new MemoryGame(MemoryGUI, cards);
 	//game makes gui
 });
