@@ -1,0 +1,74 @@
+/* CSS for GUI...*/
+
+html {
+	background-color: #ddd;
+}
+
+.clear {
+	clear: both;
+}
+
+#memorygame #memorygrid {
+	display: inline-block;
+	margin: 50px auto;
+}
+
+#memorygame #memorygrid div.card {
+	border: 5px solid #fff;
+	border-radius: 4px;
+	box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	display: block;
+	float: left;
+	height: 100px;
+	margin: 0 15px 15px 0;
+	transition: background-color 0.25s ease,
+				box-shadow 0.25s ease;
+	width: 100px;
+	
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#memorygame #memorygrid div.face-down {
+	background-color: #5EC4D3;
+}
+
+#memorygame #memorygrid div.face-down:hover {
+	background-color: #259CBA;
+	box-shadow:0 0 9px 0 rgba(0, 0, 0, 0.5);
+}
+
+#memorygame #memorygrid div.face-down span {
+	display: none;
+}
+
+#memorygame #memorygrid div.face-up {
+	background-color: #ffffff;
+	display: table;
+}
+
+#memorygame #memorygrid div.face-up span {
+	display: table-cell;
+	font-family: Georgia, sans-serif;
+	font-size: 50px;
+	font-weight: 900;
+	text-align: center;
+	vertical-align: middle;
+	
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#memorygame #memorygrid div.matched {
+	cursor: default;
+	opacity: 0;
+}
